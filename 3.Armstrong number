@@ -1,0 +1,29 @@
+//Write a Java program to check whether a given number is Armstrong or not.An Armstrong number (also called a Narcissistic number) is a number that is equal to the sum of its own digits raised to the power of the number of digits.
+import java.util.Scanner;
+public class ArmstrongNumber {
+public static void main(String[] args) {
+int num,sum = 0,digits = 0,temp;
+Scanner sc = new Scanner(System.in);
+System.out.print("Enter a number: ");
+num = sc.nextInt();
+// Count digits
+temp = num;
+while (temp > 0) {
+digits++;
+temp /= 10;
+}
+// Calculate Armstrong sum
+temp = num;
+while (temp > 0) {
+int remainder = temp % 10;
+sum += Math.pow(remainder, digits);
+temp /= 10;
+}
+// Check condition
+if (sum == num) {
+System.out.println(num + " is an Armstrong number.");
+} else {
+System.out.println(num + " is NOT an Armstrong number.");
+}
+}
+}
