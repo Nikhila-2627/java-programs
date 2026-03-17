@@ -1,0 +1,37 @@
+//Write a java program to make use of ArrayList and LinkedList
+import java.util.ArrayList;
+import java.util.LinkedList;
+public class ListExample {
+public static void main(String[] args) {
+// Creating an ArrayList
+ArrayList<String> arrayList = new ArrayList<>();
+// Adding elements to ArrayList
+arrayList.add("Apple");
+arrayList.add("Banana");
+arrayList.add("Mango");
+arrayList.add("Orange");
+System.out.println("Elements in ArrayList:");
+for (String fruit : arrayList) {
+System.out.println(fruit);
+}
+// Removing an element
+arrayList.remove("Banana");
+System.out.println("ArrayList after removing Banana: " + arrayList);
+// Creating a LinkedList
+LinkedList<String> linkedList = new LinkedList<>();
+// Adding elements to LinkedList
+linkedList.add("Red");
+linkedList.add("Green");
+linkedList.add("Blue");
+linkedList.add("Yellow");
+System.out.println("\nElements in LinkedList:");
+for (String color : linkedList) {
+System.out.println(color);
+}
+// Adding element at first position
+linkedList.addFirst("Black");
+// Removing last element
+linkedList.removeLast();
+System.out.println("LinkedList after modifications: " + linkedList);
+}
+}
