@@ -1,0 +1,53 @@
+//Write a Java Program to display the details of a person. Personal details should be given in one method and the qualification details in another method.
+import java.util.Scanner;
+class Person{
+String name, gender, city;
+int age;
+String degree, branch, university;
+int year;
+Scanner sc = new Scanner(System.in);
+void readPersonalDetails() {
+System.out.println("Enter Personal Details:");
+System.out.print("Name: ");
+name = sc.nextLine();
+System.out.print("Age: ");
+age = sc.nextInt();
+sc.nextLine();
+System.out.print("Gender: ");
+gender = sc.nextLine();
+System.out.print("City: ");
+city = sc.nextLine();
+}
+void readQualificationDetails() {
+System.out.println("\nEnter Qualification Details:");
+System.out.print("Degree: ");
+degree = sc.nextLine();
+System.out.print("Branch: ");
+branch = sc.nextLine();
+System.out.print("University: ");
+university = sc.nextLine();
+System.out.print("Year of Passing: ");
+year = sc.nextInt();
+}
+void displayPersonalDetails() {
+System.out.println("\nPersonal Details:");
+System.out.println("Name : " + name);
+System.out.println("Age : " + age);
+System.out.println("Gender : " + gender);
+System.out.println("City : " + city);
+}
+void displayQualificationDetails() {
+System.out.println("\nQualification Details:");
+System.out.println("Degree : " + degree);
+System.out.println("Branch : " + branch);
+System.out.println("University : " + university);
+System.out.println("Year : " + year);
+}
+public static void main(String[] args) {
+Person p = new Person();
+p.readPersonalDetails();
+p.readQualificationDetails();
+p.displayPersonalDetails();
+p.displayQualificationDetails();
+}
+}
