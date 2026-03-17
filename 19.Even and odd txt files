@@ -1,0 +1,30 @@
+//Write a java program to copy Even numbers into Even.txt file and Odd Numbers into Odd.txt file.
+import java.io.*;
+import java.util.*;
+public class EvenOddFileCopy {
+public static void main(String[] args) {
+try {
+// Input file containing numbers
+File inputFile = new File("Numbers.txt");
+Scanner sc = new Scanner(inputFile);
+// Writers for even and odd files
+FileWriter evenWriter = new FileWriter("Even.txt");
+FileWriter oddWriter = new FileWriter("Odd.txt");
+while (sc.hasNextInt()) {
+int num = sc.nextInt();
+if (num % 2 == 0) {
+evenWriter.write(num + " ");
+} else {
+oddWriter.write(num + " ");
+}
+}
+sc.close();
+evenWriter.close();
+oddWriter.close();
+System.out.println("Numbers copied successfully!");
+} catch (Exception e) {
+System.out.println(e);
+}
+}
+}
+}
