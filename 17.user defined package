@@ -1,0 +1,22 @@
+//Write a Java program to import and use user defined package.
+package pack1; // package declaration
+public class Calculator {
+public int add(int a, int b) {
+return a + b;
+}
+public int sub(int a, int b) {
+return a - b;
+}
+}
+Test.java:
+package pack2;
+import pack1.Calculator;
+class Test
+{
+public static void main(String args[])
+{
+Calculator c=new Calculator();
+System.out.println("addition is:" + c.add(10,20));
+System.out.println("Substraction is:" + c.sub(20,10));
+}
+}
