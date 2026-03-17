@@ -58,5 +58,4 @@ s = new Triangle(3, 8);
 s.calculateArea();
 }
 }
-}
-Output:
+
