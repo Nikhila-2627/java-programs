@@ -68,5 +68,4 @@ Person p = new Manager("Ravi", 40, 102, 90000, "HR");
 p.displayDetails(); // runtime polymorphism
 }
 }
-}
-Output:
+
