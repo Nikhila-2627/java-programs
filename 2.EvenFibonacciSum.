@@ -32,5 +32,4 @@ second = next;
 System.out.println("\nSum of even Fibonacci numbers up to " + n + " = " + sum);
 }
 }
-}
-}
+
