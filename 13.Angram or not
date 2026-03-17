@@ -25,5 +25,4 @@ System.out.println("The given strings are NOT Anagrams.");
 sc.close();
 }
 }
-}
-Output:
+
