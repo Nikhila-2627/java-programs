@@ -1,0 +1,40 @@
+//Write a Java Program to implement multiple Inheritance.
+// First interface
+interface Teacher {
+int hours = 5; // public static final by default
+void teach(); // public abstract by default
+}
+// Second interface
+interface Researcher {
+int papers = 10;
+void doResearch();
+}
+// Class implementing multiple interfaces
+class Professor implements Teacher, Researcher {
+String name;
+// Constructor
+Professor(String name) {
+this.name = name;
+}
+// Implement Teacher method
+public void teach() {
+System.out.println(name + " teaches for " + hours + " hours per day");
+}
+// Implement Researcher method
+public void doResearch() {
+System.out.println(name + " publishes " + papers + " research papers");
+}
+// Own method
+public void display() {
+System.out.println("Professor Name: " + name);
+}
+}
+// Main class
+public class MultipleInheritanceDemo {
+public static void main(String[] args) {
+Professor p = new Professor("Kiran");
+p.display();
+p.teach();
+p.doResearch();
+}
+}
