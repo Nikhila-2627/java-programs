@@ -1,0 +1,22 @@
+//Write a java program to make use of Iterator and Iterable
+import java.util.ArrayList;
+import java.util.Iterator;
+public class IteratorExample {
+public static void main(String[] args) {
+// Creating an ArrayList (Collection implementing Iterable)
+ArrayList<String> names = new ArrayList<>();
+// Adding elements
+names.add("Ravi");
+names.add("Anil");
+names.add("Kiran");
+names.add("Sita");
+// Getting the iterator
+Iterator<String> it = names.iterator();
+System.out.println("Elements in the list:");
+// Traversing the list using Iterator
+while(it.hasNext()) {
+String name = it.next();
+System.out.println(name);
+}
+}
+}
